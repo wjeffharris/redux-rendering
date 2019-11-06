@@ -20,7 +20,11 @@ const initialState = [
 const reducer = (state = initialState, action) => {
     // Handle actions here - make sure you don't mutate the state!
     const { type } = action;
-
+    if (type === "INCREMENT") {
+        return {
+            value: state.radius + 1
+        };
+    }
     // ACTION: Add a random circle
 
     return state;
